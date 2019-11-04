@@ -21,7 +21,7 @@ export class HomePage {
 
   async submitEvent(formData: FormData) {
 
-    const toast = await this.toast.create({ message: 'Reminder set!', duration: 1000 * 60, showCloseButton: true });
+    const toast = await this.toast.create({ message: 'Reminder set!', duration: 1000 * 60 });
 
     try {
       const d = new Date(formData.datetime);

@@ -2,6 +2,7 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as nodemailer from 'nodemailer';
 
+
 admin.initializeApp();
 
 // const secureCompare = require('secure-compare');
@@ -14,6 +15,7 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     auth: { user, pass }
 });
+
 
 interface Reminder {
     email: string,
