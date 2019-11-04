@@ -1,14 +1,49 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      The Reminder App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+  <h4 class="ion-text-center">Get a reminder email at any time you request, for free!</h4>
+
+  <form #form="ngForm"
+        (ngSubmit)="submitEvent(form.value)">
+
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input name="name"
+                 ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input name="email"
+                 ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Reminder Date</ion-label>
+      <ion-datetime name="datetime"
+                    pickerFormat="DD MM YYYY HH mm"
+                    ngModel></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Notes (optional)</ion-label>
+      <ion-textarea name="notes"
+                    ngModel
+                    placeholder="any notes?"></ion-textarea>
+    </ion-item>
+
+    <ion-button class="ion-float-right"
+                type="submit">
+      Set Reminder
+    </ion-button>
+
+  </form>
+
 </ion-content>
