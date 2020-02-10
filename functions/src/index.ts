@@ -27,7 +27,7 @@ interface Reminder {
 };
 
 
-export const checkReminders = functions.region('europe-west2').pubsub.schedule('every 1 minutes')
+export const checkReminders = functions.pubsub.schedule('every 1 minutes')
     .onRun(async context => {
 
         // export const checkReminders = functions.region('europe-west2').https.onRequest(
