@@ -1,49 +1,77 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      The Reminder App
+      <img src="../../assets/logo/Logo.png" alt="Notmify logo">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <h4 class="ion-text-center">Get a reminder email at any time you request, for free!</h4>
+  <ion-grid fixed>
 
-  <form #form="ngForm"
-        (ngSubmit)="submitEvent(form.value)">
+    <ion-row>
+      <ion-col size="12">
+        <h4 class="ion-text-center">Get a reminder email at any time you request, for free!</h4>
+      </ion-col>
+    </ion-row>
 
-    <ion-item>
-      <ion-label>Name</ion-label>
-      <ion-input name="name"
-                 ngModel></ion-input>
-    </ion-item>
+    <ion-row>
+      <ion-col size="12">
+        <form #form="ngForm"
+              (ngSubmit)="submitEvent(form)">
 
-    <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input name="email"
-                 ngModel></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input name="name"
+                       ngModel></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label>Reminder Date</ion-label>
-      <ion-datetime name="datetime"
-                    pickerFormat="DD MM YYYY HH mm"
-                    ngModel></ion-datetime>
-    </ion-item>
+          <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input name="email"
+                       ngModel></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Notes (optional)</ion-label>
-      <ion-textarea name="notes"
-                    ngModel
-                    placeholder="any notes?"></ion-textarea>
-    </ion-item>
+          <ion-item-group ngModelGroup="datetime">
+            <ion-item-divider>
+              <ion-label><strong>Reminder</strong></ion-label>
+            </ion-item-divider>
 
-    <ion-button class="ion-float-right"
-                type="submit">
-      Set Reminder
-    </ion-button>
+            <ion-item>
+              <ion-label>Date</ion-label>
+              <ion-datetime name="date"
+                            pickerFormat="DD MM YYYY"
+                            ngModel></ion-datetime>
+            </ion-item>
 
-  </form>
+            <ion-item>
+              <ion-label>Time</ion-label>
+              <ion-datetime name="time"
+              displayFormat="h:mm A"
+                            pickerFormat="HH mmA"
+                            ngModel></ion-datetime>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item>
+            <ion-label position="floating">Notes</ion-label>
+            <ion-textarea name="notes"
+                          ngModel
+                          placeholder="What is this reminder for?"></ion-textarea>
+          </ion-item>
+
+          <ion-button class="ion-float-right"
+                      type="submit">
+            Set Reminder
+          </ion-button>
+
+        </form>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 
 </ion-content>
