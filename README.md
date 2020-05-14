@@ -12,8 +12,8 @@ Source code for the Reminders tutorial from the `BONUS` section of the [Ionic An
 5) Run `ionic s`.
 
 ## Possible Next Steps
-* Implement other forms of notifications - push notifications, text messages, passenger pigeon if you have the resources.
-* Convert to native app using [Capactitor](https://capacitor.ionicframework.com/).
-* Add way to view pending notifications.
-* Add way to delete and edit notifications.
-* Make explcit how data is handled to user (see [GDPR](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr)).
+* Implement other forms of notifications - push notifications, text messages, or passenger pigeon if you have the necessary resources.
+* Convert to a native app using [Capacitor](https://capacitor.ionicframework.com/).
+* Add a way to view pending notifications.
+* Add a way to delete and edit notifications.
+* Make explicit to the user how and why their data is stored/used (see [GDPR](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr)).
